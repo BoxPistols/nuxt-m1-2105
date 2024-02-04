@@ -9,11 +9,7 @@
 <script>
 export default {
   name: "TestPage",
-  data() {
-    return {
-      message: "Hello, World!",
-    };
-  },
+  data() {},
 };
 </script>
 

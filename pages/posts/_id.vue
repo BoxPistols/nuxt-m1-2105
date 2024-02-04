@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="post-details">
     <h1>Post Details</h1>
     <p>Post ID: {{ postId }}</p>
     <!-- Add your post details here -->
