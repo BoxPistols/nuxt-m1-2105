@@ -13,8 +13,10 @@
     "fix": "yarn lint && yarn format"
   },
   "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.2",
     "@nuxtjs/emotion": "^0.1.0",
     "core-js": "^3.9.1",
+    "dotenv": "^16.4.1",
     "nuxt": "^2.15.3"
   },
   "devDependencies": {

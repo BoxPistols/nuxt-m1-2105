@@ -1,11 +1,21 @@
 <template>
-  <div>Hello</div>
+  <div>
+    <div class="bg-gray-100">Hello</div>
+    <div>{{ envVariable }}</div>
+  </div>
 </template>
 
 <script>
 export default {
   name: "default-layout",
+  data() {
+    return {
+      envVariable: process.env.API_KEY || "デフォルト値",
+    };
+  },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+@import "../assets/style.scss";
+</style>

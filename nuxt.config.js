@@ -1,4 +1,7 @@
 export default {
+  env: {
+    API_KEY: process.env.API_KEY,
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "nuxt-m1-2105",
@@ -23,7 +26,9 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: [
+    "@nuxtjs/dotenv", // .envの設定を追加する
+  ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -34,6 +39,11 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     analyze: true,
+    devMiddleware: {
+      headers: {
+        "X-Custom-Header": "yes",
+      },
+    },
   },
 
   babel: {
