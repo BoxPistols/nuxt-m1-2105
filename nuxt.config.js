@@ -27,8 +27,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/chakra
-    "@chakra-ui/nuxt",
     // https://go.nuxtjs.dev/emotion
     "@nuxtjs/emotion",
   ],
