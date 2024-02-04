@@ -8,9 +8,7 @@
       flex-dir="column"
       justify-content="center"
     >
-      <CHeading text-align="center" mb="4">
-        ⚡️ Hello chakra-ui/vue
-      </CHeading>
+      <CHeading text-align="center" mb="4"> ⚡️ Hello chakra-ui/vue </CHeading>
       <CFlex justify="center" direction="column" align="center">
         <CBox mb="3">
           <CIconButton
@@ -21,11 +19,7 @@
             } mode`"
             @click="toggleColorMode"
           />
-          <CButton
-            left-icon="info"
-            variant-color="blue"
-            @click="showToast"
-          >
+          <CButton left-icon="info" variant-color="blue" @click="showToast">
             Show Toast
           </CButton>
         </CBox>
@@ -69,9 +63,7 @@
             <CModalHeader>Are you sure?</CModalHeader>
             <CModalBody>Deleting user cannot be undone</CModalBody>
             <CModalFooter>
-              <CButton @click="showModal = false">
-                Cancel
-              </CButton>
+              <CButton @click="showModal = false"> Cancel </CButton>
               <CButton
                 margin-left="3"
                 variant-color="red"
@@ -104,11 +96,11 @@ import {
   CModalCloseButton,
   CIconButton,
   CFlex,
-  CHeading
-} from '@chakra-ui/vue'
+  CHeading,
+} from "@chakra-ui/vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     CBox,
     CButton,
@@ -124,45 +116,45 @@ export default {
     CModalCloseButton,
     CIconButton,
     CFlex,
-    CHeading
+    CHeading,
   },
-  inject: ['$chakraColorMode', '$toggleColorMode'],
-  data () {
+  inject: ["$chakraColorMode", "$toggleColorMode"],
+  data() {
     return {
       showModal: false,
       mainStyles: {
         dark: {
-          bg: 'gray.700',
-          color: 'whiteAlpha.900'
+          bg: "gray.700",
+          color: "whiteAlpha.900",
         },
         light: {
-          bg: 'white',
-          color: 'gray.900'
-        }
-      }
-    }
+          bg: "white",
+          color: "gray.900",
+        },
+      },
+    };
   },
   computed: {
-    colorMode () {
-      return this.$chakraColorMode()
+    colorMode() {
+      return this.$chakraColorMode();
     },
-    theme () {
-      return this.$chakraTheme()
+    theme() {
+      return this.$chakraTheme();
     },
-    toggleColorMode () {
-      return this.$toggleColorMode
-    }
+    toggleColorMode() {
+      return this.$toggleColorMode;
+    },
   },
   methods: {
-    showToast () {
+    showToast() {
       this.$toast({
-        title: 'Account created.',
+        title: "Account created.",
         description: "We've created your account for you.",
-        status: 'success',
+        status: "success",
         duration: 10000,
-        isClosable: true
-      })
-    }
-  }
-}
+        isClosable: true,
+      });
+    },
+  },
+};
 </script>
