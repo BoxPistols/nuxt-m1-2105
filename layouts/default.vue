@@ -1,21 +1,29 @@
 <template>
   <div>
-    <div class="bg-gray-100">Hello</div>
-    <div>{{ envVariable }}</div>
+    <header>
+      <!-- Your header content here -->
+    </header>
+
+    <main>
+      <!-- Your main content here -->
+      <nuxt />
+    </main>
+
+    <footer>
+      <!-- Your footer content here -->
+    </footer>
   </div>
 </template>
 
 <script>
 export default {
-  name: "default-layout",
-  data() {
-    return {
-      envVariable: process.env.API_KEY || "デフォルト値",
-    };
-  },
+  name: "DefaultLayout",
+  // Your script logic here
 };
 </script>
 
 <style scoped>
-@import "../assets/style.scss";
+main {
+  padding: 20px;
+}
 </style>

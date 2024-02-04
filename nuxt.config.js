@@ -6,7 +6,7 @@ export default {
   head: {
     title: "nuxt-m1-2105",
     htmlAttrs: {
-      lang: "en",
+      lang: "ja",
     },
     meta: [
       { charset: "utf-8" },
@@ -17,7 +17,11 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ["~/assets/css/main"],
+
+  generate: {
+    router: true,
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
