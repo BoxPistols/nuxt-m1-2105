@@ -5,7 +5,10 @@
     },
     "extends": [
         "plugin:vue/vue3-essential",
-        "airbnb-base"
+        "airbnb-base",
+        "eslint:recommended",
+        "plugin:vue/essential",
+        "plugin:prettier/recommended"
     ],
     "overrides": [
     ],
@@ -14,8 +17,11 @@
         "sourceType": "module"
     },
     "plugins": [
-        "vue"
+        "vue",
+        "prettier"
     ],
     "rules": {
+      "prettier/prettier": "error"
     }
 }
+
